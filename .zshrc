@@ -1,7 +1,8 @@
 export LANG=ja_JP.UTF-8
 
+FACE_CHAR=( "🍣" "🍺" "(´∀｀)" "(˘ω˘)" "(^ω^)" "😇" "💃" "✌︎('ω')")
 PROMPT='%F{cyan}[%n@%m:%f%F{yello}%~%f%F{cyan}]%f
-%F{cyan}>>%f '
+%F{cyan}${FACE_CHAR[$RANDOM%${#FACE_CHAR[@]}+1]}<%f '
 
 autoload -Uz vcs_info
 autoload -Uz colors
